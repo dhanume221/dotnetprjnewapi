@@ -32,7 +32,7 @@ namespace WebApplication1.API.Register
                 await db.SaveChangesAsync();
 
                 // Issue a new token for the newly registered user and store its JTI in Redis
-                await _emailService.SendEmailAsync(reg.Email, "Welcome to Our Service", $"Hello {reg.Name}, Thank you for registering!");
+                await _emailService.SendEmailAsync(reg.Email, "Welcome to Ventura", $"Hello {reg.Name}, Thank you for registering!");
                 var tokenString = await _jwtGenerator.GenerateAndCacheTokenAsync(regdata.Userid);
 
                 var response = new RegResponse

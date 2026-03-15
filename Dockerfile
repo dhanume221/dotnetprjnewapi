@@ -6,6 +6,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 ENV ASPNETCORE_ENVIRONMENT=Development
 ENV ASPNETCORE_URLS=http://0.0.0.0:8080
+ENV JWTKEY=SKMDNH345HTJF83532GWEBG45YEH2734UYRGDGTYRTYYTRYR
 EXPOSE 8080
 
 # This stage is used to build the service project

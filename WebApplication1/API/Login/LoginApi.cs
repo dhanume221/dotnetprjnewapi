@@ -38,7 +38,10 @@ namespace WebApplication1.API.Login
                     status = "Success",
                     data = new
                     {
+                        username = user.Name,
                         userid = user.Userid,
+                        email = user.Email,
+                        phone = user.Phone,
                         token = Token
                     }
                 };
